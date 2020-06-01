@@ -10,8 +10,8 @@ const Header = () => {
       </div>
       <div className="links">
         <ul>
-          <li><Link>All Games</Link></li>
-          <li><Link>Add New Game</Link></li>
+          <li><Link to={'/games'}>All Games</Link></li>
+          <li><Link to={'/'}>Add New Game</Link></li>
         </ul>
       </div>
     </header>
