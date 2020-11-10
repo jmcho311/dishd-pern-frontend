@@ -1,4 +1,4 @@
-const url = `http://localhost:3001/api/v1`
+const url = `http://localhost:4000/api/v1`
 
 class GameModel {
 
