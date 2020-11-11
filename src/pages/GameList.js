@@ -22,7 +22,7 @@ class GameList extends Component {
   render() {
     let gameList = this.state.games.map((game, index) => {
       return (
-        <Link to={`/games/${ game._id }`} key={index}>
+        <Link to={`/games/${ game.id }`} key={index}>
           <GameCard  {...game} />
         </Link>
       )
