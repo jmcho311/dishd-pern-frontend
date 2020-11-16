@@ -6,7 +6,7 @@ import GameList from '../pages/GameList'
 import GameShow from '../pages/GameShow'
 import NewGame from '../pages/NewGame'
 
-export default (
+const Routes = (props) => (
   <Switch>
     <Route exact path='/' component={ Home } />
     <Route path="/games/new" component={ NewGame } />
@@ -14,3 +14,5 @@ export default (
     <Route path='/games' component={ GameList } />
   </Switch>
 )
+
+export default Routes;
