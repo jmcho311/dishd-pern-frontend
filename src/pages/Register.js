@@ -16,10 +16,19 @@ class Register extends Component {
   }
 
   handleSubmit = (event) => {
-    // TODO: complete this function
     event.preventDefault()
+
     UserModel.create(this.state)
       .then(data => {
+        // clear the form
+        this.setState({
+          name: '',
+          email: '',
+          password: '',
+          password2: ''
+        })
+        // redirect to /login
+        this.props.history.push('/login')
       })
   }
 
