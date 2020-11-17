@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Routes from './config/routes'
+import Routes from './config/Routes'
 import './App.css'
 import UserModel from './models/user'
 
 function App() {
-
   const [currentUser, setCurrentUser] = useState(localStorage.getItem('id'))
 
   const storeUser = (userId) => {
-    setCurrentUser( userId )
     localStorage.setItem('id', userId)
+    setCurrentUser( userId )
   }
 
   const logout = (event) => {
@@ -22,7 +21,6 @@ function App() {
     UserModel.logout()
       .then(res => {
         setCurrentUser(null)
-        // redirect to /login
       })
   }
 

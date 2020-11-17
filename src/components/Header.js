@@ -1,18 +1,15 @@
 import React from 'react';
-import './Header.scss'
 import { Link } from 'react-router-dom'
+import './Header.scss'
 
 const Header = (props) => {
   return (
     <header>
       <div className="logo">
-        <Link to={'/'}>Games!</Link>
+        <Link to={'/'}>Home!</Link>
       </div>
       <div className="links">
         <ul>
-          <li><Link to={'/games'}>All Games</Link></li>
-          <li><Link to={'/games/new'}>Add New Game</Link></li>
-          
           { props.currentUser ? 
             <>
               <li><Link to={'/profile'}>Profile</Link></li>
