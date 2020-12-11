@@ -1,11 +1,7 @@
 import React from 'react'
-import PostModel from '../models/post'
+// import PostModel from '../models/post'
 
 function PostCard(props) {
-    
-    const deletePost = () => {
-        PostModel.delete(props.id)
-    }
 
     return (
         <div>
@@ -17,7 +13,29 @@ function PostCard(props) {
             <h2>{ props.dishName }</h2>
             <p>{ props.body }</p>
             <p>{ props.createdAt }</p> 
-            <button className="link" onClick={ deletePost } >
+            <form action="">
+            {/* <form onSubmit={ onSubmit }> */}
+                <input 
+                    name="dishName"
+                    placeholder="Dish Name"
+                    type="string"
+                    // onChange={ onDishChange }
+                    // onChange={ onPostChange }
+                    // value={ setDishName }
+                    // value={ post }
+                />
+                <input 
+                    name="body"
+                    placeholder="Comment"
+                    type="text"
+                    // onChange={ onBodyChange }
+                    // onChange={ onPostChange }
+                    // value={ setBody }
+                    // value={ post }
+                />
+                <button>EDIT</button>
+            </form>
+            <button className="link" onClick={() => props.deletedPost(props.id) } >
                 Delete
             </button>
         </div>
