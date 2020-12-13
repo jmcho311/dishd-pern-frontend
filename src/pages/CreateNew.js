@@ -27,9 +27,32 @@ const CreateNew = (props) => {
         })
     }
 
+    const checkUploadResult = (resultEvent) => {
+        if (resultEvent.event === 'sucess') {
+            console.log(props.currentUser.id)
+            props.postPhoto({userId: props.currentUser.id,
+                caption: '',
+                url: resultEvent.info.secure_url
+            }).then(props.history.push('/profile'))
+        }
+    }
+
+    const showWidget = (e) => {
+        e.preventDefault()
+        widget.open()
+    }
+
+    var widget = window.cloudinary.createUploadWidget({
+        cloudName: "jmcho311",
+        uploadPreset: "vyd0gpet",
+        folder: 'widgetUpload'},
+        (error, result) => { checkUploadResult(result) })
 
     return (
         <div>
+            <div id='photo-form-container'>
+                <button onClick={ showWidget }>Upload Photo</button>
+            </div>
             <h1>Create a New Post.</h1>
             <form onSubmit={ handleSubmit }>
                 <label>LOCATION </label>
