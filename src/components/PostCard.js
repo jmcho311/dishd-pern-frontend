@@ -3,11 +3,11 @@ import PostModel from '../models/post'
 
 function PostCard(props) {
     const [postId] = useState(props.id)
-    const [photo] = useState(props.photo)
-    const [locationName] = useState(props.locationName)
-    const [city] = useState(props.city)
-    const [state] = useState(props.state)
-    const [category] = useState(props.category)
+    // const [photo] = useState(props.photo)
+    // const [locationName] = useState(props.locationName)
+    // const [city] = useState(props.city)
+    // const [state] = useState(props.state)
+    // const [category] = useState(props.category)
     const [dishName, setDishName] = useState("")
     const [body, setBody] = useState("")
 
@@ -18,7 +18,7 @@ function PostCard(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        PostModel.update({ postId, photo, locationName, city, state, category, dishName, body }).then((data) => {
+        PostModel.update({ postId, dishName, body }).then((data) => {
             // console.log(data)
             props.fetchPosts()
             setDishName({ dishName: '' })  // this prints [object Object] 
