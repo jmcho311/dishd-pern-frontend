@@ -17,24 +17,21 @@ class PostModel {
         return fetch(`${ url }/${ userId }`).then(res => res.json())
     }
 
-    static update = (postId) => {
-        console.log(postId)
-        let updateInfo = {
-            locationName: postId.locationName,
-            city: postId.city,
-            state: postId.state,
-            category: postId.category,
-            dishName: postId.dishName,
-            body: postId.body
-        }
-        return fetch(`${ url }/${ postId }`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(updateInfo)
-        }).then(res => res.json())
-    }
+    // static update = (postId) => {
+    //     console.log(data)
+    //     console.log(postId)
+    //     let updateInfo = {
+    //         dishName: postId.dishName,
+    //         body: postId.body
+    //     }
+    //     return fetch(`${ url }/${ postId }`, {
+    //         method: "PUT",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(data)
+    //     }).then(res => res.json())
+    // }
 
     static delete = (postId) => {
         return fetch(`${ url }/${ postId }`, {
@@ -45,13 +42,14 @@ class PostModel {
         })
     }
 
-    static create = (postData) => {
+    static create = (data) => {
+        console.log(data)
         return fetch(`${ url }/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(postData)
+            body: JSON.stringify(data)
         }).then(res => res.json())
     }
 

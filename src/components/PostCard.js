@@ -1,7 +1,21 @@
-import React from 'react'
-// import PostModel from '../models/post'
+import React, { useState } from 'react'
+import PostModel from '../models/post'
 
 function PostCard(props) {
+    const [dishName, setDishName] = useState("")
+    const [body, setBody] = useState("")
+
+    const onDishChange = (e) => { setDishName(e.target.value) }
+    const onBodyChange = (e) => { setBody(e.target.value) }
+
+    // console.log(props)
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        PostModel.update({ dishName, body }).then((data) => {
+            props.history.push('/profile')
+        })
+    }
 
     return (
         <div>
@@ -13,29 +27,30 @@ function PostCard(props) {
             <h2>{ props.dishName }</h2>
             <p>{ props.body }</p>
             <p>{ props.createdAt }</p> 
-            <form action="">
-            {/* <form onSubmit={ onSubmit }> */}
+            <form onSubmit={ handleSubmit }>
+                {/* onSubmit={ (e) => { 
+                    e.preventDefault()
+                    dishName(props.dishName)
+                    body(props.body)
+                } }> */}
                 <input 
                     name="dishName"
                     placeholder="Dish Name"
                     type="string"
-                    // onChange={ onDishChange }
-                    // onChange={ onPostChange }
-                    // value={ setDishName }
-                    // value={ post }
+                    onChange={ onDishChange }
+                    value={ dishName }
                 />
                 <input 
                     name="body"
                     placeholder="Comment"
                     type="text"
-                    // onChange={ onBodyChange }
-                    // onChange={ onPostChange }
-                    // value={ setBody }
-                    // value={ post }
+                    onChange={ onBodyChange }
+                    value={ body }
                 />
-                <button>EDIT</button>
+                <button className="submitBtn">Submit</button>
+                {/* <button onClick={ () => props.updatedPost(props.id) }>EDIT</button> */}
             </form>
-            <button className="link" onClick={() => props.deletedPost(props.id) } >
+            <button onClick={ () => props.deletedPost(props.id) } >
                 Delete
             </button>
         </div>
