@@ -2,18 +2,27 @@ import React, { useState } from 'react'
 import PostModel from '../models/post'
 
 function PostCard(props) {
+    const [postId] = useState(props.id)
+    const [photo] = useState(props.photo)
+    const [locationName] = useState(props.locationName)
+    const [city] = useState(props.city)
+    const [state] = useState(props.state)
+    const [category] = useState(props.category)
     const [dishName, setDishName] = useState("")
     const [body, setBody] = useState("")
 
     const onDishChange = (e) => { setDishName(e.target.value) }
     const onBodyChange = (e) => { setBody(e.target.value) }
 
-    // console.log(props)
+    console.log(props)
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        PostModel.update({ dishName, body }).then((data) => {
-            props.history.push('/profile')
+        PostModel.update({ postId, photo, locationName, city, state, category, dishName, body }).then((data) => {
+            // console.log(data)
+            props.fetchPosts()
+            setDishName({ dishName: '' })  // this prints [object Object] 
+            setBody({ body: '' })   // this prints [object Object] 
         })
     }
 
@@ -28,11 +37,6 @@ function PostCard(props) {
             <p>{ props.body }</p>
             <p>{ props.createdAt }</p> 
             <form onSubmit={ handleSubmit }>
-                {/* onSubmit={ (e) => { 
-                    e.preventDefault()
-                    dishName(props.dishName)
-                    body(props.body)
-                } }> */}
                 <input 
                     name="dishName"
                     placeholder="Dish Name"
@@ -47,8 +51,7 @@ function PostCard(props) {
                     onChange={ onBodyChange }
                     value={ body }
                 />
-                <button className="submitBtn">Submit</button>
-                {/* <button onClick={ () => props.updatedPost(props.id) }>EDIT</button> */}
+                <button>Submit</button>
             </form>
             <button onClick={ () => props.deletedPost(props.id) } >
                 Delete
