@@ -1,37 +1,19 @@
 import React, { useState } from 'react'
 
 function PostCard(props) {
-    // const [postId] = useState(props.id)
-    // const [photo] = useState(props.photo)
-    // const [locationName] = useState(props.locationName)
-    // const [city] = useState(props.city)
-    // const [state] = useState(props.state)
-    // const [category] = useState(props.category)
     const [dishName, setDishName] = useState("")
     const [body, setBody] = useState("")
 
     const onDishChange = (e) => { setDishName(e.target.value) }
     const onBodyChange = (e) => { setBody(e.target.value) }
 
-    console.log(props)
+    // console.log(props)
 
     const handleSubmit = (e) => {
         e.preventDefault()
         props.updatedPost(props.id, dishName, body)
-        // let postData = {
-        //     postId: postId,
-        //     dishName: dishName,
-        //     body: body
-        // }
-        // PostModel.update({ postId, dishName, body }).then((data) => {
-        // // PostModel.update({ postData }).then((data) => {
-        //     // console.log(data)
-        //     props.fetchPosts()
-        //     // setDishName({ dishName: '' })  // this prints [object Object] 
             setDishName("")   
-        //     // setBody({ body: '' })   // this prints [object Object] 
             setBody("")   
-        // })
     }
 
     return (

@@ -14,7 +14,8 @@ const Profile = props => {
   useEffect(() => {
     fetchPosts()
     fetchUserInfo()
-  }, [])
+  // }, [])
+  })
 
   useEffect(() => {
     console.log('ran this thing')
@@ -42,13 +43,6 @@ const Profile = props => {
 
   const updatedPost = (postId, dishName, body) => {
     PostModel.update({ postId, dishName, body }).then((data) => {
-      // PostModel.update({ postData }).then((data) => {
-          // console.log(data)
-          // props.fetchPosts()
-          // setDishName({ dishName: '' })  // this prints [object Object] 
-          // setDishName("")   
-          // setBody({ body: '' })   // this prints [object Object] 
-          // setBody("")   
           setWasUpdated(!wasUpdated)
       })
   }

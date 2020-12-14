@@ -7,7 +7,8 @@ const DishShow = (props) => {
 
     useEffect(() => {
         fetchDishPosts()
-    }, [])
+    // }, [])
+    })
 
     const fetchDishPosts = () => {
         PostModel.showDish(props.location.state).then((data) => {

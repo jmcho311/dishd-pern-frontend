@@ -4,7 +4,7 @@ import PostModel from '../models/post'
 
 const CreateNew = (props) => {
     const [userId] = useState(props.currentUser)
-    const [photo] = useState(null)
+    const [photo, setPhoto] = useState("")
     const [locationName, setLocationName] = useState("")
     const [city, setCity] = useState("")
     const [state, setState] = useState("")
@@ -28,12 +28,13 @@ const CreateNew = (props) => {
     }
 
     const checkUploadResult = (resultEvent) => {
-        if (resultEvent.event === 'sucess') {
-            console.log(props.currentUser.id)
-            props.postPhoto({userId: props.currentUser.id,
-                caption: '',
-                url: resultEvent.info.secure_url
-            }).then(props.history.push('/profile'))
+        // console.log(resultEvent)
+        // console.log(resultEvent.info.secure_url)
+        if (resultEvent.event === 'success') {
+            // console.log(userId)
+            // console.log(resultEvent.info.secure_url)
+            let img_url = resultEvent.info.secure_url
+            setPhoto(img_url)
         }
     }
 
@@ -52,10 +53,15 @@ const CreateNew = (props) => {
         <div>
             <h1>Create a New Post.</h1>
             <form onSubmit={ handleSubmit }>
-                <label>PHOTO</label>
+                {/* <label>PHOTO</label>
                 <div id='photo-form-container'>
                     <button onClick={ showWidget }>Upload Photo</button>
                 </div>
+                <input
+                    type="text"
+                    value={ photo }
+                />
+                <br/> */}
                 <label>LOCATION </label>
                 <input
                     name="locationName"
@@ -108,6 +114,14 @@ const CreateNew = (props) => {
                     value={ body }
                 />
                 <br/>
+                <label>PHOTO</label>
+                <div id='photo-form-container'>
+                    <button onClick={ showWidget }>Upload Photo</button>
+                </div>
+                <input
+                    type="text"
+                    value={ photo }
+                />
                 <button className="submitBtn">Submit</button>
             </form>
         </div>
