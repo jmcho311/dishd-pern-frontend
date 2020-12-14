@@ -22,18 +22,18 @@ class PostModel {
         return fetch(`${ url }/${ userId }`).then(res => res.json())
     }
 
-    static update = (data) => {
-        console.log(data)
-        // let updateInfo = {
-        //     dishName: postId.dishName,
-        //     body: postId.body
-        // }
-        return fetch(`${ url }/${ data.postId }`, {
+    static update = (postData) => {
+        console.log(postData)
+        let updateInfo = {
+            dishName: postData.dishName,
+            body: postData.body
+        }
+        return fetch(`${ url }/${ postData.postId }`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(updateInfo)
         }).then(res => res.json())
     }
 

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import PostModel from '../models/post'
 
 function PostCard(props) {
-    const [postId] = useState(props.id)
+    // const [postId] = useState(props.id)
     // const [photo] = useState(props.photo)
     // const [locationName] = useState(props.locationName)
     // const [city] = useState(props.city)
@@ -18,18 +17,27 @@ function PostCard(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        PostModel.update({ postId, dishName, body }).then((data) => {
-            // console.log(data)
-            props.fetchPosts()
-            setDishName({ dishName: '' })  // this prints [object Object] 
-            setBody({ body: '' })   // this prints [object Object] 
-        })
+        props.updatedPost(props.id, dishName, body)
+        // let postData = {
+        //     postId: postId,
+        //     dishName: dishName,
+        //     body: body
+        // }
+        // PostModel.update({ postId, dishName, body }).then((data) => {
+        // // PostModel.update({ postData }).then((data) => {
+        //     // console.log(data)
+        //     props.fetchPosts()
+        //     // setDishName({ dishName: '' })  // this prints [object Object] 
+            setDishName("")   
+        //     // setBody({ body: '' })   // this prints [object Object] 
+            setBody("")   
+        // })
     }
 
     return (
         <div>
             <div className="image">
-                <img src={ props.photo } alt={ props.dishName }/>
+                <img src={ props.photo } alt={ dishName }/>
             </div>
             <h3>{ props.locationName }</h3>
             <h5>{ props.city }, { props.state }</h5>

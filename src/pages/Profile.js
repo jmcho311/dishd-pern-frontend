@@ -9,6 +9,7 @@ const Profile = props => {
   const [userId] = useState(props.currentUser)
   const [user, setUser] = useState([])
   const [wasDeleted, setWasDeleted] = useState(false)
+  const [wasUpdated, setWasUpdated] = useState(false)
 
   useEffect(() => {
     fetchPosts()
@@ -16,9 +17,9 @@ const Profile = props => {
   }, [])
 
   useEffect(() => {
-    // console.log('ran this thing')
+    console.log('ran this thing')
     fetchPosts()
-  }, [wasDeleted])
+  }, [wasDeleted, wasUpdated])
 
   const fetchPosts = () => {
     PostModel.showPost(userId).then((data) => {
@@ -39,10 +40,23 @@ const Profile = props => {
     })
   }
 
+  const updatedPost = (postId, dishName, body) => {
+    PostModel.update({ postId, dishName, body }).then((data) => {
+      // PostModel.update({ postData }).then((data) => {
+          // console.log(data)
+          // props.fetchPosts()
+          // setDishName({ dishName: '' })  // this prints [object Object] 
+          // setDishName("")   
+          // setBody({ body: '' })   // this prints [object Object] 
+          // setBody("")   
+          setWasUpdated(!wasUpdated)
+      })
+  }
+
   const generatePosts = () => {
     return posts.map((post, index) => (
       <div key={index}>
-        <PostCard { ...post } deletedPost={ deletedPost } fetchPosts={ fetchPosts }/>
+        <PostCard { ...post } deletedPost={ deletedPost } updatedPost={ updatedPost }/>
       </div>
     ))
   }
