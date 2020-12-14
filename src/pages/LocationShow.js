@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import ResultsCard from '../components/ResultsCard'
 import PostModel from '../models/post'
 
-
-const CategoryShow = (props) => {
+const LocationShow = (props) => {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        fetchCategoryPosts()
+        fetchLocationPosts()
     }, [])
 
-    const fetchCategoryPosts = () => {
-        PostModel.show(props.location.state).then((data) => {
+    const fetchLocationPosts = () => {
+        PostModel.showLocation(props.location.state).then((data) => {
             setPosts(data.posts)
         })
     }
 
-    const generateCategoryPosts = () => {
+    const generateLocationPosts = () => {
         return posts.map((post, index) => (
             <div key={index}>
                 <ResultsCard { ...post }/>
@@ -24,13 +23,12 @@ const CategoryShow = (props) => {
         ))
     }
 
-
     return (
         <div>
-            <h1>This is your CategoryShow Page</h1>
-            { posts.length ? generateCategoryPosts() : "Loading..." }
+            <h1>This is your LocationShow Page</h1>
+            { posts.length ? generateLocationPosts() : "Loading..." }
         </div>
     );
 }
 
-export default CategoryShow;
+export default LocationShow;

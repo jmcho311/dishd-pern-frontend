@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Search = (props) => {
     const [category, setCategory] = useState("")
-    // const [locationName, setLocationName] = useState("")
+    const [locationName, setLocationName] = useState("")
     // const [dishName, setDishName] = useState("")
 
     // console.log(props)  // only gives currentUser ID
@@ -18,7 +18,18 @@ const Search = (props) => {
     const categoryChange = (e) => {
         setCategory(e.target.value)
     }
-    
+
+    const searchLocation = (e) => {
+        e.preventDefault()
+        props.history.push({
+            pathname: '/location',
+            state: locationName
+        })
+    }
+
+    const locationChange = (e) => {
+        setLocationName(e.target.value)
+    }
 
     return (
         <div>
@@ -32,12 +43,12 @@ const Search = (props) => {
                 />
                 <button>Search by Category Posts</button>
             </form>
-            <form>
+            <form onSubmit={ searchLocation }>
                 <input 
                     type="text"
                     placeholder="RESTAURANTS"
-                    // onChange={  }
-                    // value={  }
+                    onChange={ locationChange }
+                    value={ locationName }
                 />
                 <button>Search by Restaurant Posts</button>
             </form>
