@@ -50,11 +50,12 @@ const CreateNew = (props) => {
 
     return (
         <div>
-            <div id='photo-form-container'>
-                <button onClick={ showWidget }>Upload Photo</button>
-            </div>
             <h1>Create a New Post.</h1>
             <form onSubmit={ handleSubmit }>
+                <label>PHOTO</label>
+                <div id='photo-form-container'>
+                    <button onClick={ showWidget }>Upload Photo</button>
+                </div>
                 <label>LOCATION </label>
                 <input
                     name="locationName"

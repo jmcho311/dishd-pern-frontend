@@ -6,6 +6,8 @@ import Register from '../pages/Register'
 import Login from '../pages/Login'
 import Profile from '../pages/Profile'
 import CreateNew from '../pages/CreateNew'
+import Search from '../pages/Search'
+import CategoryShow from '../pages/CategoryShow'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const currentUser = localStorage.getItem('id')
@@ -29,6 +31,8 @@ const Routes = (props) => (
     } } />
     <PrivateRoute path='/profile' component={ Profile } currentUser={ props.currentUser } />
     <PrivateRoute path='/new' component={ CreateNew } currentUser={ props.currentUser }/>
+    <PrivateRoute path='/search' component={ Search } currentUser={ props.currentUser }/>
+    <PrivateRoute path='/category' component={ CategoryShow } currentUser={ props.currentUser }/>
   </Switch>
 )
 

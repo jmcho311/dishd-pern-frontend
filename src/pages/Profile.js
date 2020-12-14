@@ -16,7 +16,7 @@ const Profile = props => {
   }, [])
 
   useEffect(() => {
-    console.log('ran this thing')
+    // console.log('ran this thing')
     fetchPosts()
   }, [wasDeleted])
 
@@ -51,7 +51,7 @@ const Profile = props => {
   return (
     <div>
       <h1>Profile Page for { user }</h1>
-      {posts.length ? generatePosts() : "Loading..."}
+      { posts.length ? generatePosts() : "Loading..." }
     </div>
   )
 }
