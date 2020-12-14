@@ -6,6 +6,7 @@ class PostModel {
     }
 
     static show = (category) => {
+        // console.log(category)
         return fetch(`${ url }/category/${ category }`).then(res => res.json())
     }
 

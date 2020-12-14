@@ -4,31 +4,21 @@ import PostModel from '../models/post'
 
 
 const CategoryShow = (props) => {
-    const [categoryPosts, setCategoryPosts] = useState([])
-    // const [locationPosts, setLocationPosts] = useState([])
+    const [posts, setPosts] = useState([])
 
     useEffect(() => {
         fetchCategoryPosts()
-        // fetchLocationPosts()
     }, [])
 
-    console.log(props)
-
     const fetchCategoryPosts = () => {
-        let category = (props.location.state)
-        PostModel.show(category).then((data) => {
-            setCategoryPosts(data.category)
+        console.log(props.location.state)
+        PostModel.show(props.location.state).then((data) => {
+            setPosts(data.posts)
         })
     }
 
-    // const fetchLocationPosts = () => {
-    //     PostModel.showLocation().then((data) => {
-    //         setLocationPosts(data.posts)
-    //     })
-    // }
-
     const generateCategoryPosts = () => {
-        return categoryPosts.map((post, index) => (
+        return posts.map((post, index) => (
             <div key={index}>
                 <ResultsCard { ...post }/>
             </div>
@@ -39,8 +29,7 @@ const CategoryShow = (props) => {
     return (
         <div>
             <h1>This is your CategoryShow Page</h1>
-            { categoryPosts.length ? generateCategoryPosts() : "Loading..." }
-            {/* { generateCategoryPosts() } */}
+            { posts.length ? generateCategoryPosts() : "Loading..." }
         </div>
     );
 }
