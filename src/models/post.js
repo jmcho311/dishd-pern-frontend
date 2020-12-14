@@ -14,6 +14,10 @@ class PostModel {
         return fetch(`${ url }/location/${ locationName }`).then(res => res.json())
     }
 
+    static showDish = (dishName) => {
+        return fetch(`${ url }/dish/${ dishName }`).then(res => res.json())
+    }
+
     static showPost = (userId) => {
         return fetch(`${ url }/${ userId }`).then(res => res.json())
     }

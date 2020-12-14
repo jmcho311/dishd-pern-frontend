@@ -9,6 +9,7 @@ import CreateNew from '../pages/CreateNew'
 import Search from '../pages/Search'
 import CategoryShow from '../pages/CategoryShow'
 import LocationShow from '../pages/LocationShow'
+import DishShow from '../pages/DishShow'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const currentUser = localStorage.getItem('id')
@@ -35,6 +36,7 @@ const Routes = (props) => (
     <PrivateRoute path='/search' component={ Search } currentUser={ props.currentUser }/>
     <PrivateRoute path='/category' component={ CategoryShow } currentUser={ props.currentUser }/>
     <PrivateRoute path='/location' component={ LocationShow } currentUser={ props.currentUser }/>
+    <PrivateRoute path='/dish' component={ DishShow } currentUser={ props.currentUser }/>
   </Switch>
 )
 
