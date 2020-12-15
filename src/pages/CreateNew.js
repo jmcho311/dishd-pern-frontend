@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PostModel from '../models/post'
-// import UserModel from '../models/user'
 
 const CreateNew = (props) => {
     const [userId] = useState(props.currentUser)
@@ -43,25 +42,16 @@ const CreateNew = (props) => {
         widget.open()
     }
 
-    var widget = window.cloudinary.createUploadWidget({
+    let widget = window.cloudinary.createUploadWidget({
         cloudName: "jmcho311",
         uploadPreset: "vyd0gpet",
         folder: 'widgetUpload'},
-        (error, result) => { checkUploadResult(result) })
+        (error, result) => { checkUploadResult(result) }) 
 
     return (
         <div>
             <h1>Create a New Post.</h1>
             <form onSubmit={ handleSubmit }>
-                {/* <label>PHOTO</label>
-                <div id='photo-form-container'>
-                    <button onClick={ showWidget }>Upload Photo</button>
-                </div>
-                <input
-                    type="text"
-                    value={ photo }
-                />
-                <br/> */}
                 <label>LOCATION </label>
                 <input
                     name="locationName"

@@ -69,12 +69,12 @@ const Search = (props) => {
                     onChange={ categoryChange }
                     value={ category }
                 />
-                {/* <select> */}
-                    {/* onChange={ categoryChange }
+                {/* <select>
+                    onChange={ categoryChange }
                     value={ category }
-                    id="selectBar" */}
-                    {/* { generateCategoryList } */}
-                {/* </select> */}
+                    id="selectBar"
+                    { generateCategoryList }
+                </select> */}
                 <button>Search by Category Posts</button>
             </form>
             <form onSubmit={ searchLocation }>

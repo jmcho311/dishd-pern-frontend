@@ -7,8 +7,8 @@ const LocationShow = (props) => {
 
     useEffect(() => {
         fetchLocationPosts()
-    // }, [])
-    })
+    }, [])
+    // })
 
     const fetchLocationPosts = () => {
         PostModel.showLocation(props.location.state).then((data) => {

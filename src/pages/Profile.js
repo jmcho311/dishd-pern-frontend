@@ -14,11 +14,11 @@ const Profile = props => {
   useEffect(() => {
     fetchPosts()
     fetchUserInfo()
-  // }, [])
-  })
+  }, [])
+  // })
 
   useEffect(() => {
-    console.log('ran this thing')
+    // console.log('ran this thing')
     fetchPosts()
   }, [wasDeleted, wasUpdated])
 
