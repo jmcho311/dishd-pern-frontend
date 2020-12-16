@@ -29,26 +29,33 @@ function PostCard(props) {
                 <h2 id="dish">{ props.dishName }</h2>
                 <p id="body">{ props.body }</p>
                 <p id="date">{ props.createdAt }</p> 
-                <form className="form" onSubmit={ handleSubmit }>
-                    <input 
+                <form className="editForm" onSubmit={ handleSubmit }>
+                    <label className="editLabel">Edit DISH NAME </label>
+                    <input
+                        className="editInput" 
                         name="dishName"
                         placeholder="Dish Name"
                         type="string"
                         onChange={ onDishChange }
                         value={ dishName }
                     />
-                    <input 
+                    <br/>
+                    <label className="editLabel">Edit CAPTION </label>
+                    <input
+                        className="editInput" 
                         name="body"
-                        placeholder="Comment"
+                        placeholder="Caption"
                         type="text"
                         onChange={ onBodyChange }
                         value={ body }
                     />
-                    <button>Submit</button>
+                    <br/>
+                    <button className="profileButton">EDIT POST</button>
+                    <br/>
+                    <button className="profileButton" onClick={ () => props.deletedPost(props.id) } >
+                        DELETE POST
+                    </button>
                 </form>
-                <button className="button" onClick={ () => props.deletedPost(props.id) } >
-                    Delete
-                </button>
             </div>
         </div>
     )

@@ -102,11 +102,11 @@ const CreateNew = (props) => {
                     value={ dishName }
                 />
                 <br/>
-                <label className="createLabel">COMMENT </label>
+                <label className="createLabel">CAPTION </label>
                 <input
                     className="commentInput"
                     name="body"
-                    placeholder="Comment"
+                    placeholder="Caption"
                     type="text"
                     onChange={ onNewBody }
                     value={ body }
