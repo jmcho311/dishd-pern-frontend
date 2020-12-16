@@ -7,7 +7,7 @@
 
 body {
     position: relative;
-    margin: 100px;
+    // margin: 100px;
     background-color: #A8A49E;
 }
 
@@ -76,56 +76,145 @@ h5 {
 }
 
 
-
-
 // ================== Search.js ==================
-body {
-    height: 100%;
-}
 
 .search {
-    margin-top: 140px;
+    margin-top: 120px;
+    margin-left: 5vw;
     // background: url("https://imgur.com/a/algEgF2");
-    background-image: url("./search.jpg");
-    height: 90vh;
+    background-image: url("./images/search.jpg");
+    height: 80vh;
     width: 90vw;
     opacity: 0.75;
 }
 
-
 .searchForm {
-    padding: 200px 200px 200px 200px;
+    padding: 250px 150px 200px 150px;
 }
 
 .input {
     height: 40px;
-    width: 200px;
+    width: 250px;
     text-align: center;
     color: black;
     font-family: Montserrat;
-    opacity: 1;
+    font-size: 20px;
     background-color: white;
     border: none;
-
 }
 
 .formButton {
+    height: 42px;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+    color: black;
+    font-family: Montserrat;
+    font-size: 20px;
+    background-color: white;
+    border: none;
+}
+
+
+// ================== CreateNew.js ==================
+
+.create {
+    margin-top: 120px;
+    margin-left: 5vw;
+    // background: url("https://imgur.com/a/algEgF2");
+    background-image: url("./images/newpost.jpg");
+    height: 80vh;
+    width: 90vw;
+    opacity: 0.75;
+}
+
+.createHeader {
+    padding-top: 30px;
+    color: white;
+}
+
+.createForm {
+    padding-top: 15px;
+    margin-left: 15vw;
+    height: 600px;
+    width: 600px;
+    // border: 1px black solid;
+    background-color: white;
+    opacity: 0.75;
+}
+
+.createInput {
+    height: 40px;
+    width: 400px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #575451;
+    text-align: left;
+    color: black;
+    font-family: Montserrat;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.cityInput {
+    height: 40px;
+    width: 300px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #575451;
+    text-align: left;
+    color: black;
+    font-family: Montserrat;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.stateInput {
+    height: 40px;
+    width: 100px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #575451;
+    text-align: left;
+    color: black;
+    font-family: Montserrat;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.commentInput {
+    height: 120px;
+    width: 400px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #575451;
+    text-align: left;
+    color: black;
+    font-family: Montserrat;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.createLabel {
+    height: 40px;
+    width: 400px;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 20px;
+}
+
+.newPostButton {
     height: 42px;
     width: 200px;
     margin: 10px;
     text-align: center;
     color: black;
     font-family: Montserrat;
-    opacity: 1;
+    font-size: 20px;
     background-color: white;
-    border: none;
+    border: 1px #575451 solid;
+    border-radius: 5px;
 }
-
-
-
-// ================== CreateNew.js ==================
-
-
 
 // ================== Login.js ==================
 

@@ -50,11 +50,12 @@ const CreateNew = (props) => {
         (error, result) => { checkUploadResult(result) }) 
 
     return (
-        <div>
-            <h1>Create a New Post.</h1>
-            <form onSubmit={ handleSubmit }>
-                <label>LOCATION </label>
+        <div className="create">
+            <h1 className="createHeader">Create a NEW POST</h1>
+            <form className="createForm" onSubmit={ handleSubmit }>
+                <label className="createLabel">LOCATION </label>
                 <input
+                    className="createInput"
                     name="locationName"
                     placeholder="Location"
                     type="text"
@@ -62,16 +63,18 @@ const CreateNew = (props) => {
                     value={ locationName }
                 />
                 <br/>
-                <label>CITY </label>
+                <label className="createLabel">CITY </label>
                 <input
+                    className="cityInput"
                     name="city"
                     placeholder="City"
                     type="text"
                     onChange={ onNewCity }
                     value={ city }
                 />
-                <label>STATE </label>
+                <label className="createLabel">STATE </label>
                 <input
+                    className="stateInput"
                     name="state"
                     placeholder="State"
                     type="text"
@@ -79,16 +82,19 @@ const CreateNew = (props) => {
                     value={ state }
                 />
                 <br/>
-                <label>CATEGORY </label>
+                <label className="createLabel">CATEGORY </label>
                 <input
+                    className="createInput"
                     name="category"
                     placeholder="Category"
                     type="text"
                     onChange={ onNewCategory }
                     value={ category }
                 />
-                <label>DISH NAME </label>
+                <br/>
+                <label className="createLabel">DISH NAME </label>
                 <input
+                    className="createInput"
                     name="dishName"
                     placeholder="Dish"
                     type="text"
@@ -96,8 +102,9 @@ const CreateNew = (props) => {
                     value={ dishName }
                 />
                 <br/>
-                <label>COMMENT </label>
+                <label className="createLabel">COMMENT </label>
                 <input
+                    className="commentInput"
                     name="body"
                     placeholder="Comment"
                     type="text"
@@ -105,15 +112,21 @@ const CreateNew = (props) => {
                     value={ body }
                 />
                 <br/>
-                <label>PHOTO</label>
+                <label className="createLabel">UPLOAD PHOTO</label>
                 <div id='photo-form-container'>
-                    <button onClick={ showWidget }>Upload Photo</button>
+                    <button className="newPostButton" onClick={ showWidget }>Upload Photo</button>
                 </div>
+                <br/>
+                <label className="createLabel">PHOTO URL </label>
                 <input
+                    className="createInput"
+                    name="photoUrl"
+                    placeholder=""
                     type="text"
                     value={ photo }
                 />
-                <button className="submitBtn">Submit</button>
+                <br/>
+                <button className="newPostButton">submit</button>
             </form>
         </div>
     )
