@@ -1,17 +1,19 @@
 import React from 'react'
+import './PostCard.scss'
+import '../pages/App.scss'
 
 function ResultsCard(props) {
 
     return (
-        <div>
-            <div className="image">
-                <img src={ props.photo } alt={ props.dishName }/>
+        <div className="postCard">
+            <div>
+                <img className="postImage" src={ props.photo } alt={ props.dishName }/>
             </div>
-            <h3>{ props.locationName }</h3>
-            <h5>{ props.city }, { props.state }</h5>
-            <h2>{ props.dishName }</h2>
-            <p>{ props.body }</p>
-            <p>{ props.createdAt }</p> 
+            <h3 id="location">{ props.locationName }</h3>
+            <h5 id="cityState">{ props.city }, { props.state }</h5>
+            <h2 id="dish">{ props.dishName }</h2>
+            <p id="body">{ props.body }</p>
+            <p id="date">{ props.createdAt }</p> 
         </div>
     )
 }

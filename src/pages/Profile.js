@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PostCard from '../components/PostCard';
 import PostModel from '../models/post'
 import UserModel from '../models/user'
+import './App.scss'
 
 
 const Profile = props => {
@@ -58,7 +59,7 @@ const Profile = props => {
 
   return (
     <div>
-      <h1>Profile Page for { user }</h1>
+      <h1 id="name">{ user }</h1>
       { posts.length ? generatePosts() : "Loading..." }
     </div>
   )

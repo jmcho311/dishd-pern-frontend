@@ -1,0 +1,95 @@
+// ================== Universal Styling ==================
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display&display=swap');
+
+// * {
+//     color: #575451;
+// }
+
+body {
+    position: relative;
+    margin: 100px;
+    background-color: #A8A49E;
+}
+
+h1 {
+    font-family: Playfair;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+h2 {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: Montserrat;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h5 {
+    font-family: Montserrat;
+    font-size: 16px;
+    // font-weight: bold;
+}
+
+
+// ================== Home.js ==================
+
+// ================== Profile.js ==================
+#name {
+    text-align: left;
+    color: #575451;
+}
+
+#location {
+    margin: 5px 10px 5px 10px;
+    color: #575451;
+}
+
+#cityState {
+    margin: 5px 10px 10px 13px;
+    color: #575451;
+}
+
+#dish {
+    margin: 20px 10px 5px 10px;
+}
+
+#body {
+    font-family: Playfair;
+    font-size: 20px;
+    margin: 5px 10px 10px 13px;
+}
+
+#date {
+    font-family: Montserrat;
+    font-size: 14px;
+    color: #575451;
+    margin: 5px 10px 10px 13px;
+}
+
+
+// ================== CategoryShow.js ==================
+// ================== DishShow.js ==================
+// ================== LocationShow.js ==================
+
+
+
+// ================== Search.js ==================
+
+
+
+
+// ================== CreateNew.js ==================
+
+
+
+// ================== Login.js ==================
+
+
+
+// ================== Register.js ==================
+

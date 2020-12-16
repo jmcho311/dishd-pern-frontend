@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PostModel from '../models/post'
+import './App.scss'
 
 const CreateNew = (props) => {
     const [userId] = useState(props.currentUser)

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 // import PostModel from '../models/post';
+import './App.scss'
+
 
 const Search = (props) => {
     const [category, setCategory] = useState("")

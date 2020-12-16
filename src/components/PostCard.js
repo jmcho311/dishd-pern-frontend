@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import './PostCard.scss'
+import '../pages/App.scss'
 
 function PostCard(props) {
     const [dishName, setDishName] = useState("")
@@ -17,35 +19,37 @@ function PostCard(props) {
     }
 
     return (
-        <div>
-            <div className="image">
-                <img src={ props.photo } alt={ dishName }/>
+        <div className="postCard">
+            <div>
+                <img className="postImage" src={ props.photo } alt={ dishName }/>
             </div>
-            <h3>{ props.locationName }</h3>
-            <h5>{ props.city }, { props.state }</h5>
-            <h2>{ props.dishName }</h2>
-            <p>{ props.body }</p>
-            <p>{ props.createdAt }</p> 
-            <form onSubmit={ handleSubmit }>
-                <input 
-                    name="dishName"
-                    placeholder="Dish Name"
-                    type="string"
-                    onChange={ onDishChange }
-                    value={ dishName }
-                />
-                <input 
-                    name="body"
-                    placeholder="Comment"
-                    type="text"
-                    onChange={ onBodyChange }
-                    value={ body }
-                />
-                <button>Submit</button>
-            </form>
-            <button onClick={ () => props.deletedPost(props.id) } >
-                Delete
-            </button>
+            <div className="postContent">
+                <h3 id="location">{ props.locationName }</h3>
+                <h5 id="cityState">{ props.city }, { props.state }</h5>
+                <h2 id="dish">{ props.dishName }</h2>
+                <p id="body">{ props.body }</p>
+                <p id="date">{ props.createdAt }</p> 
+                <form className="form" onSubmit={ handleSubmit }>
+                    <input 
+                        name="dishName"
+                        placeholder="Dish Name"
+                        type="string"
+                        onChange={ onDishChange }
+                        value={ dishName }
+                    />
+                    <input 
+                        name="body"
+                        placeholder="Comment"
+                        type="text"
+                        onChange={ onBodyChange }
+                        value={ body }
+                    />
+                    <button>Submit</button>
+                </form>
+                <button className="button" onClick={ () => props.deletedPost(props.id) } >
+                    Delete
+                </button>
+            </div>
         </div>
     )
 }

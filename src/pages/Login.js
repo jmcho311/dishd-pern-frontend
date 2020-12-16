@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 import UserModel from '../models/user'
+import './App.scss'
+
 
 const Login = props => {
   let [email, setEmail] = useState('')

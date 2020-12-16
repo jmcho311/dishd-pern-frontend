@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ResultsCard from '../components/ResultsCard'
 import PostModel from '../models/post'
+import './App.scss'
 
 
 const CategoryShow = (props) => {
