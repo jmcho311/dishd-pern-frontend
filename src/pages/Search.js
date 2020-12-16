@@ -62,41 +62,45 @@ const Search = (props) => {
     // }
 
     return (
-        <div>
-            <h1>This is your Search Form Page</h1>
-            <form onSubmit={ searchCategory }>
-                <input 
-                    type="text"
-                    placeholder="CATEGORY"
-                    onChange={ categoryChange }
-                    value={ category }
-                />
-                {/* <select>
-                    onChange={ categoryChange }
-                    value={ category }
-                    id="selectBar"
-                    { generateCategoryList }
-                </select> */}
-                <button>Search by Category Posts</button>
-            </form>
-            <form onSubmit={ searchLocation }>
-                <input 
-                    type="text"
-                    placeholder="RESTAURANTS"
-                    onChange={ locationChange }
-                    value={ locationName }
-                />
-                <button>Search by Restaurant Posts</button>
-            </form>
-            <form onSubmit={ searchDish }>
-                <input 
-                    type="text"
-                    placeholder="DISH NAME"
-                    onChange={ dishChange }
-                    value={ dishName }
-                />
-                <button>Search by Dish Posts</button>
-            </form>
+        <div className="search">
+            <div className="searchForm">
+                <form onSubmit={ searchCategory }>
+                    <input 
+                        className="input"
+                        type="text"
+                        placeholder="CATEGORY"
+                        onChange={ categoryChange }
+                        value={ category }
+                    />
+                    {/* <select>
+                        onChange={ categoryChange }
+                        value={ category }
+                        id="selectBar"
+                        { generateCategoryList }
+                    </select> */}
+                    <button className="formButton">Search by CATEGORY</button>
+                </form>
+                <form onSubmit={ searchLocation }>
+                    <input 
+                        className="input"
+                        type="text"
+                        placeholder="RESTAURANTS"
+                        onChange={ locationChange }
+                        value={ locationName }
+                    />
+                    <button className="formButton">Search by RESTAURANT</button>
+                </form>
+                <form onSubmit={ searchDish }>
+                    <input 
+                        className="input"
+                        type="text"
+                        placeholder="DISH NAME"
+                        onChange={ dishChange }
+                        value={ dishName }
+                    />
+                    <button className="formButton">Search by DISH</button>
+                </form>
+            </div>
         </div>
     );
 }

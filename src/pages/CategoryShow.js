@@ -9,8 +9,8 @@ const CategoryShow = (props) => {
 
     useEffect(() => {
         fetchCategoryPosts()
-    // }, [])
-    })
+    }, [])
+    // })
 
     const fetchCategoryPosts = () => {
         PostModel.show(props.location.state).then((data) => {

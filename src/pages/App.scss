@@ -38,7 +38,11 @@ h5 {
 
 // ================== Home.js ==================
 
+// ======= Profile.js, CategoryShow.js, DishShow.js, LocationShow.js =======
 // ================== Profile.js ==================
+// ================== CategoryShow.js ==================
+// ================== DishShow.js ==================
+// ================== LocationShow.js ==================
 #name {
     text-align: left;
     color: #575451;
@@ -72,14 +76,50 @@ h5 {
 }
 
 
-// ================== CategoryShow.js ==================
-// ================== DishShow.js ==================
-// ================== LocationShow.js ==================
-
 
 
 // ================== Search.js ==================
+body {
+    height: 100%;
+}
 
+.search {
+    margin-top: 140px;
+    // background: url("https://imgur.com/a/algEgF2");
+    background-image: url("./search.jpg");
+    height: 90vh;
+    width: 90vw;
+    opacity: 0.75;
+}
+
+
+.searchForm {
+    padding: 200px 200px 200px 200px;
+}
+
+.input {
+    height: 40px;
+    width: 200px;
+    text-align: center;
+    color: black;
+    font-family: Montserrat;
+    opacity: 1;
+    background-color: white;
+    border: none;
+
+}
+
+.formButton {
+    height: 42px;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    color: black;
+    font-family: Montserrat;
+    opacity: 1;
+    background-color: white;
+    border: none;
+}
 
 
 
