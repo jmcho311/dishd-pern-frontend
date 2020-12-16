@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import PostCard from '../components/PostCard';
+import React, { useEffect, useState } from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
+import PostCard from '../components/PostCard'
 import PostModel from '../models/post'
 import UserModel from '../models/user'
 import './App.scss'
@@ -50,17 +51,21 @@ const Profile = props => {
 
   const generatePosts = () => {
     return posts.map((post, index) => (
-      <div key={index}>
-        <PostCard { ...post } deletedPost={ deletedPost } updatedPost={ updatedPost }/>
-      </div>
+        <Col xs={6} md={4}>
+          <PostCard key={index} { ...post } deletedPost={ deletedPost } updatedPost={ updatedPost }/>
+        </Col>
     ))
   }
-  
+
 
   return (
     <div>
       <h1 id="name">{ user }</h1>
-      { posts.length ? generatePosts() : "Loading..." }
+      <Container fluid>
+        <Row>
+          { posts.length ? generatePosts() : "Loading..." }
+        </Row>
+      </Container>
     </div>
   )
 }

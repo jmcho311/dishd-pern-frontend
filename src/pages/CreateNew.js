@@ -103,7 +103,7 @@ const CreateNew = (props) => {
                 />
                 <br/>
                 <label className="createLabel">CAPTION </label>
-                <input
+                <textarea
                     className="commentInput"
                     name="body"
                     placeholder="Caption"
