@@ -188,9 +188,18 @@ h5 {
     opacity: 0.75;
 }
 
-.createInput {
+.locationLabel, .cityLabel, .stateLabel, .categoryLabel, .dishLabel, .captionLabel, .urlLabel {
     height: 40px;
-    width: 400px;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 20px;
+    color: black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.locationInput, .cityInput, .stateInput, .categoryInput, .dishInput, .uploadInput {
+    height: 40px;
     outline: 0;
     border-width: 0 0 2px;
     border-color: #575451;
@@ -199,24 +208,31 @@ h5 {
     font-family: Montserrat;
     font-size: 20px;
     margin-bottom: 10px;
+}
+
+.locationInput, .categoryInput {
+    width: 415px;
 }
 
 .cityInput {
-    height: 40px;
     width: 300px;
-    outline: 0;
-    border-width: 0 0 2px;
-    border-color: #575451;
-    text-align: left;
-    color: black;
-    font-family: Montserrat;
-    font-size: 20px;
-    margin-bottom: 10px;
+}
+
+.stateLabel {
+    margin-left: 10px;
 }
 
 .stateInput {
-    height: 40px;
     width: 100px;
+}
+
+.dishInput {
+    width: 405px;
+}
+
+.captionInput {
+    height: 80px;
+    width: 430px;
     outline: 0;
     border-width: 0 0 2px;
     border-color: #575451;
@@ -224,28 +240,29 @@ h5 {
     color: black;
     font-family: Montserrat;
     font-size: 20px;
-    margin-bottom: 10px;
 }
 
-.commentInput {
-    height: 120px;
-    width: 400px;
-    outline: 0;
-    border-width: 0 0 2px;
-    border-color: #575451;
+.uploadLabel {
+    height: 30px;
     text-align: left;
-    color: black;
     font-family: Montserrat;
     font-size: 20px;
-    margin-bottom: 10px;
+    color: black;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
-.createLabel {
+.urlInput {
     height: 40px;
     width: 400px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #575451;
     text-align: left;
+    color: black;
     font-family: Montserrat;
     font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .newPostButton {

@@ -53,9 +53,9 @@ const CreateNew = (props) => {
         <div className="create">
             <h1 className="createHeader">Create a NEW POST</h1>
             <form className="createForm" onSubmit={ handleSubmit }>
-                <label className="createLabel">LOCATION </label>
+                <label className="locationLabel">LOCATION </label>
                 <input
-                    className="createInput"
+                    className="locationInput"
                     name="locationName"
                     placeholder="Location"
                     type="text"
@@ -63,7 +63,7 @@ const CreateNew = (props) => {
                     value={ locationName }
                 />
                 <br/>
-                <label className="createLabel">CITY </label>
+                <label className="cityLabel">CITY </label>
                 <input
                     className="cityInput"
                     name="city"
@@ -72,7 +72,7 @@ const CreateNew = (props) => {
                     onChange={ onNewCity }
                     value={ city }
                 />
-                <label className="createLabel">STATE </label>
+                <label className="stateLabel">STATE </label>
                 <input
                     className="stateInput"
                     name="state"
@@ -82,9 +82,9 @@ const CreateNew = (props) => {
                     value={ state }
                 />
                 <br/>
-                <label className="createLabel">CATEGORY </label>
+                <label className="categoryLabel">CATEGORY </label>
                 <input
-                    className="createInput"
+                    className="categoryInput"
                     name="category"
                     placeholder="Category"
                     type="text"
@@ -92,9 +92,9 @@ const CreateNew = (props) => {
                     value={ category }
                 />
                 <br/>
-                <label className="createLabel">DISH NAME </label>
+                <label className="dishLabel">DISH NAME </label>
                 <input
-                    className="createInput"
+                    className="dishInput"
                     name="dishName"
                     placeholder="Dish"
                     type="text"
@@ -102,9 +102,9 @@ const CreateNew = (props) => {
                     value={ dishName }
                 />
                 <br/>
-                <label className="createLabel">CAPTION </label>
+                <label className="captionLabel">CAPTION </label>
                 <textarea
-                    className="commentInput"
+                    className="captionInput"
                     name="body"
                     placeholder="Caption"
                     type="text"
@@ -112,14 +112,14 @@ const CreateNew = (props) => {
                     value={ body }
                 />
                 <br/>
-                <label className="createLabel">UPLOAD PHOTO</label>
+                <label className="uploadLabel">UPLOAD PHOTO</label>
                 <div id='photo-form-container'>
                     <button className="newPostButton" onClick={ showWidget }>Upload Photo</button>
                 </div>
                 <br/>
-                <label className="createLabel">PHOTO URL </label>
+                <label className="urlLabel">PHOTO URL </label>
                 <input
-                    className="createInput"
+                    className="urlInput"
                     name="photoUrl"
                     placeholder=""
                     type="text"
