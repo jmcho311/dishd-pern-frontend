@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 import ResultsCard from '../components/ResultsCard'
 import PostModel from '../models/post'
 import './App.scss'
@@ -19,17 +20,21 @@ const DishShow = (props) => {
 
     const generateDishPosts = () => {
         return posts.map((post, index) => (
-            <div key={ index }>
-                <ResultsCard { ...post }/>
-            </div>
+            <Col xs={6} md={4}>
+                <ResultsCard key={ index } { ...post }/>
+            </Col>
         ))
     }
 
 
     return (
         <div>
-            <h1>This is your Dish Show page</h1>
-            { posts.length ? generateDishPosts() : "Loading..." }
+            <h1 id="name">This is your Dish Show page</h1>
+            <Container fluid>
+                <Row>
+                    { posts.length ? generateDishPosts() : "Loading..." }
+                </Row>
+            </Container>
         </div>
     )
 }
