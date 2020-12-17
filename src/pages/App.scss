@@ -36,9 +36,42 @@ button:hover {
     opacity: 0.75;
 }
 
+
 // ================== Home.js ==================
 .home {
-    margin-top: 100px;
+    margin-top: 120px;
+}
+
+.container {
+    margin: 0 50px 0 50px;
+}
+
+.img1 {
+    width: 500px;
+    box-shadow: 5px 5px 15px;
+}
+
+.homeHeader1 {
+    font-family: Montserrat;
+    font-size: 42px;
+    font-weight: bold;
+    color: #575451;
+    text-align: left;
+    margin: 45px 115px 0 115px;
+}
+
+.img2 {
+    width: 380px;
+    box-shadow: 5px 5px 15px;
+}
+
+.homeHeader2 {
+    font-family: Montserrat;
+    font-size: 42px;
+    font-weight: bold;
+    color: #575451;
+    text-align: left;
+    margin-bottom: 75px;
 }
 
 
@@ -76,6 +109,7 @@ button:hover {
     color: #575451;
     margin: 5px 10px 10px 13px;
 }
+
 
 // ================== Profile.js ==================
 .container-fluid {
@@ -168,7 +202,6 @@ button:hover {
 
 
 // ================== CreateNew.js ==================
-
 .create {
     margin-top: 120px;
     margin-left: 5vw;

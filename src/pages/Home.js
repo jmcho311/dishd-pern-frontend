@@ -7,16 +7,14 @@ const Home = () => {
     <div className="home">
       <Container>
         <Row>
-          <Col sm={8}><img src="../images/home.jpg" alt="breakfast"/></Col>
-            {/* <img src="../images/home.jpg" alt="breakfast"/> */}
-          <Col sm={4}><h3>bringing people and food together</h3></Col>
-            {/* <h3>bringing people and food together</h3> */}
-        </Row>
-        <Row>
-          <Col sm={4}><h3>a simple way to post and share your favorite food</h3></Col>
-            {/* <h3>a simple way to post and share your favorite food</h3> */}
-          <Col sm={8}><img src="../images/home2.jpg" alt="pasta"/></Col>
-            {/* <img src="../images/home2.jpg" alt="pasta"/> */}
+          <Col sm={8}>
+            <img className="img1" src="../images/home.jpg" alt="breakfast"/>
+            <h3 className="homeHeader1">bringing people and food together</h3>
+          </Col>
+          <Col sm={4}>
+            <h3 className="homeHeader2">a simple way to post and share your favorite food</h3>
+            <img className="img2" src="../images/home2.jpg" alt="pasta"/>
+          </Col>
         </Row>
       </Container>
     </div>
