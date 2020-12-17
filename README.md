@@ -97,6 +97,7 @@ Special shoutout to the extra set of eyes (in alphabetical order), debugging hel
 * Kelsey Whallon
 * Lauren Nguyen
 * Lucy Franco
+* Mario Carbonell
 * Michael Petty
 * Seanny Phoenix
 * Tess Bishop
