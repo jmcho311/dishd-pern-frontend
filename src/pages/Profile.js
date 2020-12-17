@@ -57,7 +57,7 @@ const Profile = props => {
 
   return (
     <div>
-      <h1 id="name">{ user }</h1>
+      <h1 id="headerName">{ user }</h1>
       <Container fluid>
         <Row>
           { posts.length ? generatePosts() : "Loading..." }

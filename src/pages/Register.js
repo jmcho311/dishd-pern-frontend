@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 import UserModel from '../models/user'
 import './App.scss'
+import registerImg from './images/register.png'
 
 
 const Register = props => {
@@ -36,54 +38,67 @@ const Register = props => {
 
   return (
     <div>
-      <h4>Register</h4>
-      <form onSubmit={ handleSubmit }>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input 
-            onChange={ handleName } 
-            value={ name }
-            type="text" 
-            id="name" 
-            name="name" 
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="name">Email</label>
-          <input 
-            onChange={ handleEmail } 
-            value={ email } 
-            type="email" 
-            id="email" 
-            name="email" 
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="name">Password</label>
-          <input 
-            onChange={ handlePassword } 
-            value={ password } 
-            type="password" 
-            id="password" 
-            name="password" 
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="confirm-password">Confirm Password</label>
-          <input 
-            onChange={ handleConfirmPassword } 
-            value={ confirmPassword } 
-            type="password" 
-            id="confirm-password" 
-            name="confirm-password" 
-            required
-          />
-        </div>
-        <button type="submit">Register</button>
-      </form>
+      <Container>
+        <Row>
+          <Col sm={6}>
+            <img className="registerImg" src={ registerImg } alt="food"/>
+          </Col>
+          <Col sm={6}>
+            <form className="registerForm" onSubmit={ handleSubmit }>
+              <h2 id="registerHeader">Register</h2>
+              <div>
+                <label className="registerLabel" htmlFor="name">Name</label>
+                <input 
+                  className="input"
+                  onChange={ handleName } 
+                  value={ name }
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required
+                />
+              </div>
+              <div>
+                <label className="registerLabel" htmlFor="name">Email</label>
+                <input 
+                  className="input"
+                  onChange={ handleEmail } 
+                  value={ email } 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required
+                />
+              </div>
+              <div>
+                <label className="registerLabel" htmlFor="name">Password</label>
+                <input 
+                  className="input"
+                  onChange={ handlePassword } 
+                  value={ password } 
+                  type="password" 
+                  id="password" 
+                  name="password" 
+                  required
+                />
+              </div>
+              <div>
+                <label className="registerLabel" htmlFor="confirm-password">Confirm Password</label>
+                <input
+                  className="input"
+                  onChange={ handleConfirmPassword } 
+                  value={ confirmPassword } 
+                  type="password" 
+                  id="confirm-password" 
+                  name="confirm-password" 
+                  required
+                />
+              </div>
+              <button className="registerButton" type="submit">Register</button>
+            </form>
+          </Col>
+        </Row>
+      </Container>
     </div>
   )
 }

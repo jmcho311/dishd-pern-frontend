@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 import { Redirect } from 'react-router-dom'
 import UserModel from '../models/user'
 import './App.scss'
-
+import loginImg from './images/login.png'
 
 const Login = props => {
   let [email, setEmail] = useState('')
@@ -38,34 +39,43 @@ const Login = props => {
 
   return (
     <div>
-      <h4 id="name">Login</h4>
-      <form onSubmit={ handleSubmit }>
-        <div className="form-group">
-          <label htmlFor="name">Email</label>
-          <input 
-            onChange={ handleEmail } 
-            value={ email } 
-            type="email" 
-            id="email" 
-            name="email" 
-            required  
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input 
-            onChange={ handlePassword } 
-            value={ password } 
-            type="password" 
-            id="password" 
-            name="password" 
-            required
-          />
-        
-        </div>
-        <button type="submit">Login</button>
-      </form>
+      <Container>
+        <Row>
+          <Col sm={6}>
+            <img className="loginImg" src={ loginImg } alt="food"/>
+          </Col>
+          <Col sm={6}>
+            <form className="loginForm" onSubmit={ handleSubmit }>
+              <h2 id="loginHeader">Login</h2>
+              <div className="form-group">
+                <label className="emailLabel" htmlFor="name">Email</label>
+                <input 
+                  className="input"
+                  onChange={ handleEmail } 
+                  value={ email } 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required  
+                />
+              </div>
+              <div className="form-group">
+                <label className="passwordLabel" htmlFor="password">Password</label>
+                <input 
+                  className="input"
+                  onChange={ handlePassword } 
+                  value={ password } 
+                  type="password" 
+                  id="password" 
+                  name="password" 
+                  required
+                />
+              </div>
+              <button className="loginButton" type="submit">login</button>
+            </form>
+          </Col>
+        </Row>
+      </Container>
     </div>
   )
 }

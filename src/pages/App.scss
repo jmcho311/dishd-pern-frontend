@@ -76,7 +76,8 @@ button:hover {
 
 
 // ======= Profile.js, CategoryShow.js, DishShow.js, LocationShow.js =======
-#name {
+// #name {
+#headerName {
     text-align: left;
     color: #575451;
     margin-top: 100px;
@@ -317,8 +318,88 @@ button:hover {
 }
 
 // ================== Login.js ==================
+.loginImg {
+    width: 550px;
+    margin-top: 150px;
+    box-shadow: 5px 5px 15px;
+}
 
+.loginForm, .registerForm {
+    margin-top: 275px;
+}
+
+.form-group {
+    margin-left: 50px;
+}
+
+#loginHeader {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 600;
+    color: #575451;
+    text-align: left;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+
+.emailLabel, .passwordLabel {
+    height: 40px;
+    width: 125px;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #575451;
+}
+
+.loginButton {
+    height: 42px;
+    width: 75px;
+    margin: 10px;
+    text-align: center;
+    color:#575451;
+    font-family: Montserrat;
+    font-size: 20px;
+    background-color: white;
+    border: 1px #575451 solid;
+    border-radius: 5px;
+}
 
 
 // ================== Register.js ==================
+.registerImg {
+    width: 450px;
+    margin-top: 150px;
+    box-shadow: 5px 5px 15px;
+}
 
+#registerHeader {
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 600;
+    color: #575451;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.registerLabel {
+    height: 40px;
+    width: 200px;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #575451;
+}
+
+.registerButton {
+    height: 42px;
+    width: 150px;
+    margin: 10px 10px 10px 110px;
+    text-align: center;
+    color:#575451;
+    font-family: Montserrat;
+    font-size: 20px;
+    background-color: white;
+    border: 1px #575451 solid;
+    border-radius: 5px;
+}
