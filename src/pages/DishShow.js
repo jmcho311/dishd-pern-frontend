@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
 import ResultsCard from '../components/ResultsCard'
 import PostModel from '../models/post'
 import './App.scss'
@@ -10,7 +10,6 @@ const DishShow = (props) => {
     useEffect(() => {
         fetchDishPosts()
     }, [])
-    // })
 
     const fetchDishPosts = () => {
         PostModel.showDish(props.location.state).then((data) => {
@@ -32,7 +31,7 @@ const DishShow = (props) => {
             <h1>This is your Dish Show page</h1>
             { posts.length ? generateDishPosts() : "Loading..." }
         </div>
-    );
+    )
 }
 
 export default DishShow;

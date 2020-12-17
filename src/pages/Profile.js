@@ -17,10 +17,8 @@ const Profile = props => {
     fetchPosts()
     fetchUserInfo()
   }, [])
-  // })
 
   useEffect(() => {
-    // console.log('ran this thing')
     fetchPosts()
   }, [wasDeleted, wasUpdated])
 
@@ -37,7 +35,6 @@ const Profile = props => {
   }
 
   const deletedPost = (postId) => {
-    // console.log(postId)
     PostModel.delete(postId).then((data) => {
       setWasDeleted(!wasDeleted)
     })

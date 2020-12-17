@@ -1,13 +1,9 @@
 // ================== Universal Styling ==================
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display&display=swap');
 
-// * {
-//     color: #575451;
-// }
 
 body {
     position: relative;
-    // margin: 100px;
     background-color: #A8A49E;
 }
 
@@ -32,64 +28,22 @@ h3 {
 h5 {
     font-family: Montserrat;
     font-size: 16px;
-    // font-weight: bold;
 }
 
+button:hover {
+    cursor: pointer;
+    background: lightgray;
+    opacity: 0.75;
+}
 
 // ================== Home.js ==================
 
 // ======= Profile.js, CategoryShow.js, DishShow.js, LocationShow.js =======
-// ================== Profile.js ==================
-// .postContainer {
-//     display: flex;
-// }
-
-.editForm {
-    padding-top: 15px;
-}
-
-.editLabel {
-    height: 40px;
-    width: 400px;
-    margin: 5px 10px 10px 13px;
-    text-align: left;
-    font-family: Montserrat;
-    font-size: 14px;
-}
-
-.editInput {
-    height: 20px;
-    width: 300px;
-    outline: 0;
-    border-width: 0 0 2px;
-    border-color: #575451;
-    text-align: left;
-    color: black;
-    font-family: Montserrat;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.profileButton {
-    height: 30px;
-    width: 120px;
-    margin: 5px auto 5px 13px;
-    text-align: center;
-    color: black;
-    font-family: Montserrat;
-    font-size: 14px;
-    background-color: white;
-    border: 1px #575451 solid;
-    border-radius: 5px;
-}
-
-
-// ================== CategoryShow.js ==================
-// ================== DishShow.js ==================
-// ================== LocationShow.js ==================
 #name {
     text-align: left;
     color: #575451;
+    margin-top: 100px;
+    margin-left: 20px;
 }
 
 #location {
@@ -119,13 +73,61 @@ h5 {
     margin: 5px 10px 10px 13px;
 }
 
+// ================== Profile.js ==================
+.container-fluid {
+    margin-top: 10px;
+}
+
+.editForm {
+    padding-top: 15px;
+}
+
+.editLabel {
+    height: 20px;
+    width: 400px;
+    margin: 5px 10px 10px 13px;
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+
+.editInput {
+    height: 40px;
+    width: 350px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #575451;
+    text-align: left;
+    color: black;
+    font-family: Montserrat;
+    font-size: 14px;
+    margin: 5px 10px 0 13px;
+}
+
+.profileButton {
+    height: 30px;
+    width: 120px;
+    margin: 5px auto 5px 13px;
+    text-align: center;
+    color: black;
+    font-family: Montserrat;
+    font-size: 14px;
+    background-color: white;
+    border: 1px #575451 solid;
+    border-radius: 5px;
+}
+
+
+// ================== CategoryShow.js ==================
+// ================== DishShow.js ==================
+// ================== LocationShow.js ==================
+
 
 // ================== Search.js ==================
 
 .search {
     margin-top: 120px;
     margin-left: 5vw;
-    // background: url("https://imgur.com/a/algEgF2");
     background-image: url("./images/search.jpg");
     background-repeat: no-repeat;
     height: 80vh;
@@ -149,7 +151,7 @@ h5 {
 }
 
 .formButton {
-    height: 42px;
+    height: 40px;
     width: 250px;
     margin: 10px;
     text-align: center;
@@ -166,7 +168,6 @@ h5 {
 .create {
     margin-top: 120px;
     margin-left: 5vw;
-    // background: url("https://imgur.com/a/algEgF2");
     background-image: url("./images/newpost.jpg");
     background-repeat: no-repeat;
     height: 80vh;

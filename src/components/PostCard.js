@@ -30,7 +30,6 @@ function PostCard(props) {
                 <p id="body">{ props.body }</p>
                 <p id="date">{ props.createdAt }</p> 
                 <form className="editForm" onSubmit={ handleSubmit }>
-                    <label className="editLabel">Edit DISH NAME </label>
                     <input
                         className="editInput" 
                         name="dishName"
@@ -39,8 +38,8 @@ function PostCard(props) {
                         onChange={ onDishChange }
                         value={ dishName }
                     />
+                    <label className="editLabel">Edit DISH NAME </label>
                     <br/>
-                    <label className="editLabel">Edit CAPTION </label>
                     <input
                         className="editInput" 
                         name="body"
@@ -49,6 +48,7 @@ function PostCard(props) {
                         onChange={ onBodyChange }
                         value={ body }
                     />
+                    <label className="editLabel">Edit CAPTION </label>
                     <br/>
                     <button className="profileButton">EDIT POST</button>
                     <br/>

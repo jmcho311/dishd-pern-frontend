@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-// import PostModel from '../models/post';
+import React, { useState } from 'react'
+// import PostModel from '../models/post'
 import './App.scss'
 
 
@@ -68,7 +68,7 @@ const Search = (props) => {
                     <input 
                         className="input"
                         type="text"
-                        placeholder="CATEGORY"
+                        placeholder="category"
                         onChange={ categoryChange }
                         value={ category }
                     />
@@ -84,7 +84,7 @@ const Search = (props) => {
                     <input 
                         className="input"
                         type="text"
-                        placeholder="RESTAURANTS"
+                        placeholder="restaurant"
                         onChange={ locationChange }
                         value={ locationName }
                     />
@@ -94,7 +94,7 @@ const Search = (props) => {
                     <input 
                         className="input"
                         type="text"
-                        placeholder="DISH NAME"
+                        placeholder="dish name"
                         onChange={ dishChange }
                         value={ dishName }
                     />
@@ -102,7 +102,7 @@ const Search = (props) => {
                 </form>
             </div>
         </div>
-    );
+    )
 }
 
-export default Search;
+export default Search

@@ -4,10 +4,10 @@ import './App.scss'
 
 
 const Register = props => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
 
   const handleName = e => {
     setName(e.target.value)
@@ -29,7 +29,6 @@ const Register = props => {
       UserModel.create({ name, email, password })
         .then(data => {
           console.log('Successful register', data)
-          // redirect to /login
           props.history.push('/login')
         })
     }
@@ -89,4 +88,4 @@ const Register = props => {
   )
 }
 
-export default Register;
+export default Register

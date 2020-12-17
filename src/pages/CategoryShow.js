@@ -10,7 +10,6 @@ const CategoryShow = (props) => {
     useEffect(() => {
         fetchCategoryPosts()
     }, [])
-    // })
 
     const fetchCategoryPosts = () => {
         PostModel.show(props.location.state).then((data) => {
@@ -32,7 +31,7 @@ const CategoryShow = (props) => {
             <h1>This is your CategoryShow Page</h1>
             { posts.length ? generateCategoryPosts() : "Loading..." }
         </div>
-    );
+    )
 }
 
 export default CategoryShow;
