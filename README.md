@@ -1,4 +1,4 @@
-# When In Roam
+# dishd
 > Note: Built to work with [this repo](https://github.com/jmcho311/dishd-pern-backend).
 
 ### About
@@ -24,11 +24,11 @@ Users can do the following:
 
 One-to-Many Entity Relationship Diagram
 
-![ERD] (./public/images/p4ERD.png)
+![ERD](./public/images/p4ERD.png)
 
 #### Wireframes
 
-![Wireframes] (./public/images/p4Wireframes.png)
+![Wireframes](./public/images/p4Wireframes.png)
 
 
 ### Technologies
