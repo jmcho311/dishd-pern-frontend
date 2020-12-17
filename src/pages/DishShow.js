@@ -29,7 +29,7 @@ const DishShow = (props) => {
 
     return (
         <div>
-            <h1 id="name">This is your Dish Show page</h1>
+            <h1 id="name">SEARCH RESULTS for: '{ props.location.state }'</h1>
             <Container fluid>
                 <Row>
                     { posts.length ? generateDishPosts() : "Loading..." }

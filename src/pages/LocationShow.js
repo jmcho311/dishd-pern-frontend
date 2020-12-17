@@ -27,9 +27,10 @@ const LocationShow = (props) => {
         ))
     }
 
+
     return (
         <div>
-            <h1 id="name">This is your LocationShow Page</h1>
+            <h1 id="name">SEARCH RESULTS for: '{ props.location.state }'</h1>
             <Container fluid>
                 <Row>
                     { posts.length ? generateLocationPosts() : "Loading..." }
