@@ -29,6 +29,7 @@ function PostCard(props) {
                 <h2 id="dish">{ props.dishName }</h2>
                 <p id="body">{ props.body }</p>
                 <p id="date">{ props.createdAt }</p> 
+                {/* install/import/use Luxon to format date */}
                 <form className="editForm" onSubmit={ handleSubmit }>
                     <input
                         className="editInput" 
