@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 import ResultsCard from '../components/ResultsCard'
 import PostModel from '../models/post'
 import './App.scss'
@@ -20,16 +21,20 @@ const LocationShow = (props) => {
 
     const generateLocationPosts = () => {
         return posts.map((post, index) => (
-            <div key={index}>
-                <ResultsCard { ...post }/>
-            </div>
+            <Col xs={6} md={4}>
+                <ResultsCard key={index} { ...post }/>
+            </Col>
         ))
     }
 
     return (
         <div>
-            <h1>This is your LocationShow Page</h1>
-            { posts.length ? generateLocationPosts() : "Loading..." }
+            <h1 id="name">This is your LocationShow Page</h1>
+            <Container fluid>
+                <Row>
+                    { posts.length ? generateLocationPosts() : "Loading..." }
+                </Row>
+            </Container>
         </div>
     );
 }
